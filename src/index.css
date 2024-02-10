@@ -3,3 +3,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer utilities {
+  .button-color {
+    @apply border-slate-400 bg-slate-400 dark:bg-teal-700 dark:border-teal-700 hover:bg-slate-500 dark:hover:bg-teal-600 hover:border-slate-500 dark:hover:border-teal-600 hover:text-slate-100;
+  }
+}

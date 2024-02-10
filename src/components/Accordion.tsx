@@ -17,7 +17,9 @@ const Accordion = (props: accordionProps) => {
         onBlurCapture={() => setExpandText(false)}
       >
         <div>
-          <h1 className='text-md group-hover:text-red-500'>{props.title}</h1>
+          <h1 className='text-md group-hover:text-red-500 dark:text-slate-300 dark:group-hover:text-teal-500'>
+            {props.title}
+          </h1>
         </div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -26,18 +28,20 @@ const Accordion = (props: accordionProps) => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          stroke-width='2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           className={`lucide lucide-chevron-down ${
-            expandText ? 'tansform -rotate-180 duration-500 text-red-600' : ''
+            expandText
+              ? 'tansform -rotate-180 duration-500 text-red-600 dark:text-teal-500'
+              : ''
           }`}
         >
           <path d='m6 9 6 6 6-6' />
         </svg>
       </div>
       <div
-        className={`text-justify ${
+        className={`text-justify dark:text-slate-300 ${
           expandText ? 'max-h-screen' : 'max-h-0'
         } overflow-hidden`}
       >
